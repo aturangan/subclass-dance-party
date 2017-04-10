@@ -15,13 +15,11 @@ $(document).ready(function() {
     $('body').append(dancer.$node);
   });
 
+
   $('.lineUp').on('click', function(event) {
-    for (var i = 0; i < window.dancers.length; i++) {
-       var dancer = window.dancers[i];
-       var styleSettings = {
-         top: 500
-       };
-       dancer.$node.css(styleSettings);
-     }
-   });
+   for (var i = 0; i < window.dancers.length; i++) {
+     var increment = i * 100
+     window.dancers[i].setPosition(650, 400 + increment)
+   }
+ })
 });
